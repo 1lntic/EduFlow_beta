@@ -1,0 +1,9 @@
+/* Wklej w Więcej > Edytuj własny CSS. Zmiana akcentu i kart. */
+html[data-eduflow] {
+  --ef-accent: #bba5ff;
+  --ef-accent-fill: #7052c6;
+  --ef-radius: 22px;
+}
+html[data-eduflow="light"] {
+  --ef-accent: #6742b8;
+}

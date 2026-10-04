@@ -1,0 +1,71 @@
+html[data-eduflow] {
+  --ef-bg:#0e1420; --ef-surface:#182131; --ef-raised:#202c40;
+  --ef-ink:#edf3ff; --ef-muted:#a9b8d0; --ef-border:#30405a;
+  --ef-accent:#86adff; --ef-accent-fill:#315ebd; --ef-radius:18px;
+  color-scheme:dark;
+  background:var(--ef-bg)!important;
+  -webkit-text-size-adjust:100%;
+}
+html[data-eduflow="light"] {
+  --ef-bg:#f3f6fc; --ef-surface:#fff; --ef-raised:#e9eff9;
+  --ef-ink:#17233a; --ef-muted:#4d607f; --ef-border:#d6dfed;
+  --ef-accent:#285ec7; --ef-accent-fill:#285ec7; color-scheme:light;
+}
+html[data-eduflow] body {
+  background:var(--ef-bg)!important; color:var(--ef-ink)!important;
+  font-family:system-ui,-apple-system,'Segoe UI',sans-serif!important;
+  font-size:16px!important; line-height:1.5!important;
+  margin:0!important; min-width:0!important;
+}
+html[data-eduflow] :where(h1,h2,h3,h4,h5,h6,label,legend,th) {color:var(--ef-ink)!important;}
+html[data-eduflow] :where(h1,h2,h3) {letter-spacing:-.025em;line-height:1.25;}
+html[data-eduflow] h1 {font-size:26px!important;}
+html[data-eduflow] h2 {font-size:22px!important;}
+html[data-eduflow] a {color:var(--ef-accent)!important;}
+html[data-eduflow] :where(.card,.panel,.panel-body,.panel-heading,.well,.modal-content,.dropdown-menu,.list-group-item,.k-grid,.k-grid-content,.k-window-content,.k-header) {
+  background:var(--ef-surface)!important; color:var(--ef-ink)!important;
+  border-color:var(--ef-border)!important;
+}
+html[data-eduflow] :where(.card,.panel,.well,.modal-content) {border-radius:var(--ef-radius)!important;}
+html[data-eduflow] :where(.card-body,.panel-body) {padding:16px!important;}
+html[data-eduflow] :where(.text-muted,.help-block,small) {color:var(--ef-muted)!important;}
+html[data-eduflow] :where(input:not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=submit]):not([type=button]),select,textarea) {
+  background:var(--ef-raised)!important; color:var(--ef-ink)!important;
+  border:1px solid var(--ef-border)!important; border-radius:12px!important;
+  min-height:46px; font-size:16px!important; max-width:100%;
+  padding:10px 12px; box-sizing:border-box;
+}
+html[data-eduflow] ::placeholder {color:var(--ef-muted)!important;opacity:1;}
+html[data-eduflow] :where(button,.btn,input[type=submit],input[type=button]) {
+  min-height:44px; border-radius:12px!important; font-size:15px;
+  white-space:normal;
+}
+html[data-eduflow] :where(.btn-primary,button[type=submit],input[type=submit]) {
+  background:var(--ef-accent-fill)!important; border-color:var(--ef-accent-fill)!important; color:#fff!important;
+}
+html[data-eduflow] :where(.btn-default,.btn-secondary) {
+  background:var(--ef-raised)!important; border-color:var(--ef-border)!important; color:var(--ef-ink)!important;
+}
+html[data-eduflow] :where(header,.navbar,nav[role=navigation]) {
+  background:var(--ef-surface)!important; color:var(--ef-ink)!important; border-color:var(--ef-border)!important;
+}
+html[data-eduflow] :where(.table-responsive,.k-grid-content,.table-container) {overflow-x:auto!important;-webkit-overflow-scrolling:touch;}
+html[data-eduflow] table {border-color:var(--ef-border)!important;font-size:14px!important;}
+html[data-eduflow] :where(td,th) {border-color:var(--ef-border)!important;padding:11px 9px!important;}
+html[data-eduflow] :where(.table-striped>tbody>tr:nth-of-type(odd),.k-alt) {background:var(--ef-raised)!important;}
+html[data-eduflow] :where(.table>tbody>tr>td,.table>tbody>tr>th,.table>thead>tr>th) {background:transparent!important;color:var(--ef-ink)!important;}
+html[data-eduflow] :focus-visible {outline:2px solid var(--ef-accent)!important;outline-offset:3px;}
+html[data-eduflow] img {max-width:100%;height:auto;}
+@media(max-width:680px) {
+  html[data-eduflow] :where(.container,.container-fluid,main,[role=main],.content-wrapper) {
+    min-width:0!important;max-width:100%!important;width:auto!important;
+    box-sizing:border-box!important;
+  }
+  html[data-eduflow] :where(.container,.container-fluid,main,[role=main]) {padding-left:12px!important;padding-right:12px!important;}
+  html[data-eduflow] .row {margin-left:0!important;margin-right:0!important;}
+  html[data-eduflow] :where(.col-md-6,.col-md-8,.col-md-9,.col-lg-6,.col-lg-8,.col-lg-9) {width:100%!important;float:none!important;padding-left:0!important;padding-right:0!important;}
+  html[data-eduflow] :where(.modal-dialog,.k-window) {max-width:calc(100vw - 24px)!important;}
+  html[data-eduflow] :where(.breadcrumb,.nav-tabs) {overflow-x:auto;white-space:nowrap;}
+}
+html[data-eduflow][data-ef-compact="true"] :where(.card-body,.panel-body) {padding:11px!important;}
+html[data-eduflow][data-ef-compact="true"] :where(td,th) {padding:8px 6px!important;}
